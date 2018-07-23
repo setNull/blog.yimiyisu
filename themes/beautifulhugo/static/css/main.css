@@ -126,12 +126,12 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-    background: #F5F5F5;
+    background: #EAEAEA;
     border-bottom: 1px solid #EAEAEA;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.navbar-custom .nav li a {
+.navbar-custom .nav li a 
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;

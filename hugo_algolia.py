@@ -68,6 +68,3 @@ if __name__ == '__main__':
 
 # pip install algoliasearch
 # python hugo_algolia.py ALGOLIA_API_KEY="ADMIN_API_KEY"
-
-# https://jeremyyin.com
-# jeremyyin2012@gmail.com

@@ -5,6 +5,6 @@ bigimg: [{src: "https://ws1.sinaimg.cn/large/00704eQkgy1fsazo12js7j30xc0c5auf.jp
 draft: true
 notoc: true
 tags: [""]
-categories: ["kubernetes"]
+categories: ["effective"]
 ---
 

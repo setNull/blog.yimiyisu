@@ -1,11 +1,11 @@
 ---
-baseurl: "https://jimmysong.io/"
+baseurl: "https://yimiyisu.club/"
 DefaultContentLanguage: "zh"
 hasCJKLanguage: true
 languageCode: "zh"
-title: "Jimmy Song"
+title: "一米一粟的技术博客"
 theme: "beautifulhugo"
 metaDataFormat: "yaml"
-subtitle: "I can help you building Cloud Native confidence"
+subtitle: "Tracking my ideas of coding and life"
 dateFormat: "January 2, 2006"
 ---
