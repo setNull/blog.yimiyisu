@@ -15,15 +15,14 @@ subtitle = "Tracking my ideas of coding and life"
 #logo = ""
 favicon = ""
 dateFormat = "January 2, 2006"
-commit = false
 #rss = true
 baiduKey = ""
-#comments = false
+#comments = true
 #sharebutton = true
-#algolia = "d2134c5a8d250e6d3246594240c45201" # API key
+algolia = "fdsfdgdgfdgdgd" # API key
 #gcse = "012737790962522169780:fd1izxsfgrs" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 description = "yimiyisu.club"
-#errorpage = "https://res.cloudinary.com/jimmysong/image/upload/images/404-not-found-cat.png"
+#errorpage = ""
 
 [[Params.bigimg]]
 src = "/images/gohugo-default-sample-hero-image.jpg"
