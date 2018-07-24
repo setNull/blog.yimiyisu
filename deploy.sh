@@ -10,12 +10,12 @@ git add -A
 git commit -m "$msg"
 git push origin master
 
+rm -rf $des/
+
 # Build the project.
 hugo # if using a theme, replace by `hugo -t <yourtheme>`
 hugo-algolia --config algolia.yaml -s
-
-#cp -r public/* $des
-# Go To Public folder
+cp CNAME $des
 cd $des
 
 
