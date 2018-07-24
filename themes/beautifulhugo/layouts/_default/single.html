@@ -36,11 +36,6 @@
                 {{ end }}
             </div>
             {{ end }}
-            <!-- post metadata-->
-            {{ if isset .Params "postmeta" }}
-              {{ else }}
-            {{ partial "postmeta.html" . }}
-            {{ end }}
             </div>
             <!-- gitments -->
             {{ if isset .Site.Params "comments" }}
