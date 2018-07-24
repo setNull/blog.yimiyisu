@@ -17,12 +17,10 @@ favicon = ""
 dateFormat = "January 2, 2006"
 #rss = true
 baiduKey = ""
-#comments = true
-#sharebutton = true
-algolia = "fdsfdgdgfdgdgd" # API key
-#gcse = "012737790962522169780:fd1izxsfgrs" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+comments = true
+sharebutton = true
+algolia = "4bfe9116489df902f720b8c4d468391e" # API key
 description = "yimiyisu.club"
-#errorpage = ""
 
 [[Params.bigimg]]
 src = "/images/gohugo-default-sample-hero-image.jpg"
@@ -43,7 +41,7 @@ desc = ""
 
 [[menu.main]]
     parent = "Categories"
-    name = "Machine Learning"
+    name = "ML"
     url = "categories/machine-learning"
     weight = 1
 
@@ -67,13 +65,19 @@ desc = ""
 
 [[menu.main]]
     parent = "Categories"
+    name = "Algorithm"
+    url = "categories/algoritm"
+    weight = 5
+
+[[menu.main]]
+    parent = "Categories"
     name = "Tags"
     url = "tags"
     weight = 8
 
 [[menu.main]]
     identifier = "Codes"
-    name = "Codes"
+    name = "Open Source"
     weight = 2
 
 [[menu.main]]

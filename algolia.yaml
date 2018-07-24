@@ -1,11 +1,14 @@
 ---
-baseurl: "https://yimiyisu.club/"
-DefaultContentLanguage: "zh"
+baseurl: "https://yimiyisu.club"
+DefaultContentLanguage: "zh-cn"
 hasCJKLanguage: true
-languageCode: "zh"
+languageCode: "zh-cn"
 title: "一米一粟的技术博客"
 theme: "beautifulhugo"
 metaDataFormat: "yaml"
-subtitle: "Tracking my ideas of coding and life"
-dateFormat: "January 2, 2006"
+algolia:
+  index: "blog.yimiyisu"
+  key: "4a35b2249a90c829e59dce6d1baa301b"
+  appID: "Z0U6RUICAF"
+
 ---
