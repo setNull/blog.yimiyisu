@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>一米一粟的技术博客</title>
+    <link>https://yimiyisu.club/</link>
+    <description>Recent content on 一米一粟的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>wangjie2011cs@gmail.com (一米一粟)</managingEditor>
+    <webMaster>wangjie2011cs@gmail.com (一米一粟)</webMaster>
+    <lastBuildDate>Mon, 23 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yimiyisu.club/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Host Blog on Github Pages</title>
+      <link>https://yimiyisu.club/posts/my-first-post/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
+      <author>wangjie2011cs@gmail.com (一米一粟)</author>
+      <guid>https://yimiyisu.club/posts/my-first-post/</guid>
+      <description>准备 GitHub Hugo 七牛云存储 百度统计</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://yimiyisu.club/about/</link>
+      <pubDate>Sat, 18 Mar 2017 20:53:54 +0800</pubDate>
+      <author>wangjie2011cs@gmail.com (一米一粟)</author>
+      <guid>https://yimiyisu.club/about/</guid>
+      <description>Info Shanghai, China 🇨🇳 Major in Software Engineering Contact Email: wangjie2011cs@gmail.com 微信公众号: 一米一粟</description>
+    </item>
+    
+  </channel>
+</rss>
