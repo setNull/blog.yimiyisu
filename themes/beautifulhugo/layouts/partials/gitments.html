@@ -1,30 +1,28 @@
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <aside id=comments>
-    <!-- gitment
     <div>
         <h2> Comments </h2>
     </div>
     <div id="container"></div>
     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-    -->
-    <!--
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-    -->
-    <!--
-    <script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/gitment.browser.js"></script>
     <script>
         var gitment = new Gitment({
-            owner: 'rootsongjc', //github account
-            repo: 'rootsongjc.github.io', // github repo
+            id: '{{ .Slug }}',
+            owner: 'setNull', //github account
+            repo: 'setNull.github.io', // github repo
             oauth: {
-                client_id: '93a0df08e0f93ff0c8a3',
-                client_secret: '89f20e962982401489bc9339dea437161ea44c68',
+            //for localhost:
+            //client_id: 'f80f625f97b4923f6db3',
+           //client_secret: '3ec58e78578b5a6f871a9a8497c862e7b4a4fc34',
+            client_id: '80645cefedb52a774ceb',
+            client_secret: 'bb02e7236dce6c0331c36158d6938e6dd2746c7c',
             },
         })
         gitment.render('container')
     </script>
-    -->
     <!-- 来必力City版安装代码 -->
+    <!--
     <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjI4Ni8xMjgyMQ==">
     	<script type="text/javascript">
        (function(d, s) {
@@ -38,6 +36,7 @@
     	</script>
     <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
     </div>
+    -->
     <!-- City版安装代码已完成 -->
 </aside>
 </div>

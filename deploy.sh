@@ -12,7 +12,7 @@ git push origin master
 
 # Build the project.
 hugo # if using a theme, replace by `hugo -t <yourtheme>`
-hugo-algolia --config algolia.yaml
+hugo-algolia --config algolia.yaml -s
 
 #cp -r public/* $des
 # Go To Public folder

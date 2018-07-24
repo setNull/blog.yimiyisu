@@ -4,6 +4,7 @@ date: "2018-07-23"
 title: "Host Blog on Github Pages"
 categories: "Effective"
 tags: ["hugo","github-pages"]
+slug: "my-first-post"
 bigimg: [{src: "https://res.cloudinary.com/jimmysong/image/upload/images/20151005061.jpg", desc: ""}]
 ---
 
