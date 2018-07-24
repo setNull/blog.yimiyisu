@@ -22,9 +22,6 @@ INDEX_NAME = 'rootsongjc-hugo'
 
 ADMIN_API_KEY = get_admin_key()
 
-def client_for_search_only():
-    return algoliasearch.Client(APPLICATION_ID, SEARCH_ONLY_API_KEY)
-
 def client_for_admin():
     return algoliasearch.Client(APPLICATION_ID, ADMIN_API_KEY)
 
