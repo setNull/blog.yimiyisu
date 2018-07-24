@@ -18,7 +18,6 @@ hugo-algolia --config algolia.yaml -s
 # Go To Public folder
 cd $des
 
-rm -f algolia.json
 
 git add -A
 git commit -m "$msg"
