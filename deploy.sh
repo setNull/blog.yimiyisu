@@ -10,7 +10,7 @@ git add -A
 git commit -m "$msg"
 git push origin master
 
-rm -rf $des/
+rm -rf $des/*
 
 # Build the project.
 hugo # if using a theme, replace by `hugo -t <yourtheme>`
