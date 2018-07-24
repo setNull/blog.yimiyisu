@@ -1,4 +1,4 @@
-baseurl = "https://yimiyisu.club"
+baseurl = "https://blog.yimiyisu.club"
 DefaultContentLanguage = "en"
 hasCJKLanguage = true
 languageCode = "zh"
@@ -20,7 +20,7 @@ baiduKey = ""
 comments = true
 sharebutton = true
 algolia = "4bfe9116489df902f720b8c4d468391e" # API key
-description = "yimiyisu.club"
+description = "blog.yimiyisu.club"
 
 [[Params.bigimg]]
 src = "/images/gohugo-default-sample-hero-image.jpg"
@@ -29,7 +29,7 @@ desc = ""
 
 [Author]
   name = "一米一粟"
-  website = "https://yimiyisu.club"
+  website = "https://blog.yimiyisu.club"
   github = "setNull"
   linkedin = "jie-wang-b10ab976"
   email = "wangjie2011cs@gmail.com"
