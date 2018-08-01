@@ -2,7 +2,7 @@
 title: "Tensorflow_basic"
 date: 2018-08-01T08:23:39+08:00
 bigimg: [{src: "https://ws1.sinaimg.cn/large/00704eQkgy1fsazo12js7j30xc0c5auf.jpg", desc: "Flowers|Hangzhou|Apr 5,2018"}]
-draft: true
+draft: false
 notoc: true
 tags: [""]
 categories: ["effective"]
