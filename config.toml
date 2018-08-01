@@ -1,4 +1,4 @@
-baseurl = "https://blog.yimiyisu.club"
+baseurl = "https://blog.yimiyisu.club/"
 DefaultContentLanguage = "en"
 hasCJKLanguage = true
 languageCode = "zh"
@@ -29,7 +29,7 @@ desc = ""
 
 [Author]
   name = "一米一粟"
-  website = "https://blog.yimiyisu.club"
+  website = "https://blog.yimiyisu.club/"
   github = "setNull"
   linkedin = "jie-wang-b10ab976"
   email = "wangjie2011cs@gmail.com"
