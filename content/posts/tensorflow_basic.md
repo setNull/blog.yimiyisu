@@ -55,7 +55,6 @@ for op in graph.get_operations():
 
 可以这样创建会话：
 ``` python
-
 sess=tf.Session()
 ... your code ...
 ... your code ...
