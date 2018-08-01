@@ -1,7 +1,7 @@
 ---
 draft: false
 date: "2018-07-23"
-title: "Host Blog on Github Pages"
+title: "在Github Pages搭建个人博客"
 categories: "Effective"
 tags: ["hugo","github-pages"]
 bigimg: [{src: "https://res.cloudinary.com/jimmysong/image/upload/images/20151005061.jpg", desc: ""}]

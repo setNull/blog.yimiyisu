@@ -1,5 +1,5 @@
 ---
-title: "Tensorflow_basic"
+title: "Tensorflow 基础知识（开篇）"
 date: 2018-08-01T08:23:39+08:00
 bigimg: [{src: "https://res.cloudinary.com/dh5dheplm/image/upload/v1533094873/samples/ecommerce/accessories-bag.jpg", desc: ""}]
 draft: false
@@ -148,7 +148,10 @@ init
 上例输出结果为6.
 
 * 在TensorFlow中应用设备
-TensorFlow具有非常强大的内置功能，可以在gpu, cpu或者gpu集群上运行你的代码。 它为你提供了选项，使你能选择要用来运行代码的设备。 这里不对此进行详细介绍，随后会有单独关于这个主题的教程。先来看一下TensorFlow全貌：
+TensorFlow具有非常强大的内置功能，可以在gpu, cpu或者gpu集群上运行你的代码。 它为你提供了选项，使你能选择要用来运行代码的设备。 
+这里不对此进行详细介绍，随后会有单独关于这个主题的教程(**TODO**)。
+
+先来看一下TensorFlow全貌：
 ![TensorFlow全貌](http://res.cloudinary.com/dh5dheplm/image/upload/v1533095198/xTensorflow_Graph_0.png.pagespeed.ic.U_RLEnluD2.png)
 
 下一篇介绍TF的简单代码样例。 我们会一起学习线性回归的代码。
