@@ -1,11 +1,11 @@
 ---
 title: "Tensorflow_basic"
 date: 2018-08-01T08:23:39+08:00
-bigimg: [{src: "https://ws1.sinaimg.cn/large/00704eQkgy1fsazo12js7j30xc0c5auf.jpg", desc: "Flowers|Hangzhou|Apr 5,2018"}]
+bigimg: [{src: "https://res.cloudinary.com/dh5dheplm/image/upload/v1533094873/samples/ecommerce/accessories-bag.jpg", desc: ""}]
 draft: false
 notoc: true
-tags: [""]
-categories: ["effective"]
+tags: ["TensorFlow"]
+categories: ["machine-learning"]
 ---
 
 # TensorFlow基础
@@ -54,7 +54,7 @@ for op in graph.get_operations():
 图仅仅是定义了计算或者说构建了设计蓝图。 然而，除非我们在会话中运行图或者图的一部分，否则没有任何变量也没有任何值。
 
 可以这样创建会话：
-```
+``` python
 
 sess=tf.Session()
 ... your code ...
@@ -62,7 +62,7 @@ sess=tf.Session()
 sess.close()
 ```
 打开一个会话时，要记得在结尾处关闭。或者可以用python中的with语句块，如此一来，它将会自动被关闭：
-```
+``` python
 with tf.Session() as sess:
     sess.run(f)
 ```
@@ -73,7 +73,7 @@ TF将数据保存在Tensors中，它有点像numPy包中的多维数组（尽管
 
 常量的值不能修改，定义方式如下：
 
-```
+``` python
 a=tf.constant(1.0)
 a
 <tf.Tensor'Const:0' shape=() dtype=float32>
@@ -81,7 +81,7 @@ a
 Tensor("Const:0", shape=(), dtype=float32)
 ```
 可以看到，不同于Python之类的其他语言，这里并不能直接打印/访问常量的值，除非在会话中运行，再来试一下：
-```
+``` python
 with tf.Session() as sess:
     print(sess.run(a))
 ```
@@ -90,7 +90,7 @@ with tf.Session() as sess:
 * 变量
 
 即Tensors，和其它语言中的变量相似。
-```
+``` python
 >>>b = tf.Variable(2.0,name="test_var")
 >>>b
 <tensorflow.python.ops.variables.Variable object at 0x7f37ebda1990>
@@ -98,29 +98,29 @@ with tf.Session() as sess:
 变量（顾名思义）和常量不同，能够存储不同的值。然而，在TF中，变量需要分别进行初始化，单独初始化每个变量效率很低。但TensorFlow提供了一次性初始化所有变量的机制，具体方法如下：
 
 对于0.11及更早的tf版本，使用initialize_all_variables()方法：
-```
+``` python
 >>>init_op = tf.initialize_all_variables()
 ```
 0.12及以后的版本，使用global_variables_initializer():
-```
+``` python
 >>>init_op = tf.global_variables_initializer()
 ```
 上述代码会把init_op添加到TensorFlow的默认图中。
 
 现在，试图访问刚才定义的变量b之前，先运行一下init_op，打印b输出2.0：
-```
+``` python
 with tf.Session() as sess:
     sess.run(init_op)
     print(sess.run(b))
 ```
 现在可以打印出该图中的全部操作：
-```
+``` python
 graph = tf.get_default_graph()
 for op in graph.get_operations():
     print(op.name)
 ```
 This will now output:
-```
+``` python
 Const
 test_var/initial_value
 test_var
@@ -133,7 +133,7 @@ init
 * 占位符
 
 占位符，顾名思义表示占位，是指等待被初始化/填充的tensors。占位符被用于训练数据，只有当代码是在会话中运行的时候占位符才会被填充。“喂给”占位符的东西叫做feed_dict。Feed_dict是用于存储数据的（一系列）键值对：
-```
+``` python
 >>>a = tf.placeholder("float")
 >>>b = tf.placeholder("float")
 >>>y = tf.multiply(a, b)
@@ -150,7 +150,7 @@ init
 
 * 在TensorFlow中应用设备
 TensorFlow具有非常强大的内置功能，可以在gpu, cpu或者gpu集群上运行你的代码。 它为你提供了选项，使你能选择要用来运行代码的设备。 这里不对此进行详细介绍，随后会有单独关于这个主题的教程。先来看一下TensorFlow全貌：
-![TensorFlow全貌](http://cv-tricks.com/wp-content/uploads/2017/02/xTensorflow_Graph_0.png.pagespeed.ic.U_RLEnluD2.webp)
+![TensorFlow全貌](http://res.cloudinary.com/dh5dheplm/image/upload/v1533095198/xTensorflow_Graph_0.png.pagespeed.ic.U_RLEnluD2.png)
 
 下一篇介绍TF的简单代码样例。 我们会一起学习线性回归的代码。
 
