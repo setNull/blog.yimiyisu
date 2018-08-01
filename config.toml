@@ -72,7 +72,7 @@ desc = ""
 [[menu.main]]
     parent = "Categories"
     name = "Tags"
-    url = "/tags"
+    url = "tags"
     weight = 8
 
 [[menu.main]]
