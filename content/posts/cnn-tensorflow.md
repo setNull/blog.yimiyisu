@@ -4,7 +4,7 @@ date: 2018-08-01T15:35:02+08:00
 bigimg: [{src: "https://res.cloudinary.com/dh5dheplm/image/upload/v1533094873/samples/ecommerce/accessories-bag.jpg", desc: ""}]
 draft: false
 notoc: true
-tags: ["CNN","tensorflow","图片分类", "深度学习"]
+tags: ["CNN","tensorflow"]
 categories: ["machine-learning"]
 ---
 
