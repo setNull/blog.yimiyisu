@@ -28,7 +28,7 @@ categories: ["machine-learning"]
 ### 理解训练的过程
 （**TODO**）
 1.网络的结构
-2.纠正权重/参数
+2.迭代更新权重/参数
 
 ## 第二部分： TF实现基于CNN的图片分类器
 
@@ -37,17 +37,19 @@ categories: ["machine-learning"]
 网络结构图：
 ![网络结构](http://res.cloudinary.com/dh5dheplm/image/upload/v1533135229/ml/xTensorflow-tutorial-2-1.jpg.pagespeed.ic.cetItSpDJP.png)
 
-### 必备知识
-
-1. OpenCV
-2. Shape函数
-3. SoftMax
-
 ### 数据
+本文数据集基于 [Kaggle Dogs vs Cats](https://www.kaggle.com/c/dogs-vs-cats)。
+一般的，我们把输入数据分成2部分：
+1. 训练集：本文中每个分类500张图片
+    * 用80%的训练集作为训练样本，用来更新网络权重/参数
+    * 用20%的训练集作为验证样本，用来独立于训练过程计算准确率。
+2. 测试集： 用完全独立于训练集的图片（）作为测试集， 本文中测试集一共400张图片。
 
 ### 创建网络层
 
 * 卷积层
+
+
 * Flattening层
 * 全链接层
 * 占位及输入

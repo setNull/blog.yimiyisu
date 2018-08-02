@@ -26,4 +26,4 @@ bigimg: [{src: "/images/gohugo-default-sample-hero-image.jpg", desc: "Review the
 
 <center>微信公众号: 一米一粟</center>
 
-![微信公众号 - 一米一粟](https://ws1.sinaimg.cn/large/00704eQkgy1frnpro3wcjj3076076aar.jpg) 
+![微信公众号 - 一米一粟](https://res.cloudinary.com/dh5dheplm/image/upload/v1533188624/my/qrcode_for_gh_8eba5c405d53_258.jpg) 
