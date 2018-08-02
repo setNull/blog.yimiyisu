@@ -82,10 +82,15 @@ desc = ""
 
 [[menu.main]]
     parent = "Codes"
-    name = "face_recognition"
+    name = "Face_Recognition"
     url = "https://github.com/ageitgey/face_recognition"
     weight = 2
 
+[[menu.main]]
+    parent = "Codes"
+    name = "FaceNet"
+    url = "https://github.com/davidsandberg/facenet"
+    weight = 1
 
 [[menu.main]]
     name = "About"
