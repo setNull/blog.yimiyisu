@@ -106,7 +106,7 @@ def create_convolutional_layer(input,
 
 * Flattening层
 
-The Output of a convolutional layer is a multi-dimensional Tensor. We want to convert this into a one-dimensional tensor. This is done in the Flattening layer. We simply use the reshape operation to create a single dimensional tensor as defined below:
+卷积层的输出是一个多维的张量。我们需要将其转化成一维的张量。这就需要引入Flattening层。我们简单的用reshape操作来创建一个一维张量：
 ``` python
 def create_flatten_layer(layer):
     layer_shape = layer.get_shape()
@@ -118,7 +118,7 @@ def create_flatten_layer(layer):
 
 * 全链接层
 
-Now, let’s define a function to create a fully connected layer. Just like any other layer, we declare weights and biases as random normal distributions. In fully connected layer, we take all the inputs, do the standard z=wx+b operation on it. Also sometimes you would want to add a non-linearity(RELU) to it. So, let’s add a condition that allows the caller to add RELU to the layer
+现在， 我们来定义全连接层。和卷积层一样，我们初始化权重和偏差为随机正态分布。在全连接层中，我们将所有的输入做z=wx+b的操作。然后对其结果应用Relu激活函数（可选）。
 ``` python
 def create_fc_layer(input,          
              num_inputs,    
@@ -128,22 +128,18 @@ def create_fc_layer(input,
     #Let's define trainable weights and biases.
     weights = create_weights(shape=[num_inputs, num_outputs])
     biases = create_biases(num_outputs)
-
     layer = tf.matmul(input, weights) + biases
     if use_relu:
         layer = tf.nn.relu(layer)
-
     return layer
 ```
-So, we have finished defining the building blocks of the network.
+到这里， 我们就定义好了网络结构。
 
-
-
-**（To Be Continue）**
-* * *
 * 占位及输入
 
-Now, let’s create a placeholder that will hold the input training images. All the input images are read in dataset.py file and resized to 128 x 128 x 3 size. Input placeholder x is created in the shape of [None, 128, 128, 3]. The first dimension being None means you can pass any number of images to it. For this program, we shall pass images in the batch of 16 i.e. shape will be [16 128 128 3]. Similarly, we create a placeholder y_true for storing the predictions. For each image, we have two outputs i.e. probabilities for each class. Hence y_pred is of the shape [None 2] (for batch size 16 it will be [16 2].
+现在， 我们来创建占位符x，用来接收输入的训练图片。所有的输入图片在dataset.py中加载并且缩放到 128 * 128 * 3。因此， 输入x的形状是``` [None, 128, 128, 3] ```, 第一维None表明可以输入任意张图片。
+类似的， 我们创建占位符y_true， 用来存放预测值。对于每张图片， 我们有两个输出值，即该图片输入每个分类的概率，因此， y_pred的形状是``` [None, 2]```, 第一维None表示图片数目，和x相同。
+
 ``` python
 x = tf.placeholder(tf.float32, shape=[None, img_size,img_size,num_channels], name='x')
 
@@ -152,7 +148,8 @@ y_true_cls = tf.argmax(y_true, dimension=1)
 ```
 
 * 网络设计
-We use the functions defined above to create various layers of the network.
+
+我们用上面定义的各个函数来构建出最终的网络：
 ``` python
 layer_conv1 = create_convolutional_layer(input=x,
                num_input_channels=num_channels,
@@ -181,28 +178,13 @@ layer_fc2 = create_fc_layer(input=layer_fc1,
                      num_outputs=num_classes,
                      use_relu=False)
 ```
+至此， CNN网络已经构建完成。
+
+**（未完待续。。。）**
+
 * 预测
 
-As mentioned above, you can get the probability of each class by applying softmax to the output of fully connected layer.
-
-```y_pred = tf.nn.softmax(layer_fc2,name="y_pred")```
-
-y_pred contains the predicted probability of each class for each input image. The class having higher probability is the prediction of the network. 
-```y_pred_cls = tf.argmax(y_pred, dimension=1)```
-
-Now, let’s define the cost that will be minimized to reach the optimum value of weights. We will use a simple cost that will be calculated using a Tensorflow function softmax_cross_entropy_with_logits which takes the output of last fully connected layer and actual labels to calculate cross_entropy whose average will give us the cost.
-``` python
-cross_entropy = tf.nn.softmax_cross_entropy_with_logits(logits=layer_fc2, labels=y_true)
-cost = tf.reduce_mean(cross_entropy)
-```
-
 * 优化
-Tensorflow implements most of the optimisation functions. We shall use AdamOptimizer for gradient calculation and weight optimization. We shall specify that we are trying to minimise cost with a learning rate of 0.0001.
-``` python
-optimizer = tf.train.AdamOptimizer(learning_rate=1e-4).minimize(cost)
-```
-As you know, if we run optimizer operation inside session.run(), in order to calculate the value of cost, the whole network will have to be run and we will pass the training images in a feed_dict(Does that make sense? Think about, what variable would you need to calculate cost and keep going up in the code). Training images are passed in a batch of 16(batch_size) in each iteration.
-
 
 ### 预测
 
