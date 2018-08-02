@@ -8,7 +8,7 @@ nocomment: true
 postmeta: false
 notoc: true
 seealso: false
-bigimg: [{src: "/images/gohugo-default-sample-hero-image.jpg", desc: "Review the world as a hero"}]
+bigimg: [{src: "https://res.cloudinary.com/dh5dheplm/image/upload/v1533190223/my/gohugo-default-sample-hero-image.jpg", desc: "Review the world as a hero"}]
 ---
 
 ### Info
