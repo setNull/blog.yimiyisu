@@ -3,7 +3,6 @@ title: "Tensorflow 基础知识（开篇）"
 date: 2018-08-01T08:23:39+08:00
 bigimg: [{src: "https://res.cloudinary.com/dh5dheplm/image/upload/v1533094873/samples/ecommerce/accessories-bag.jpg", desc: ""}]
 draft: false
-notoc: true
 tags: ["TensorFlow"]
 categories: ["machine-learning"]
 ---
@@ -66,7 +65,7 @@ with tf.Session() as sess:
     sess.run(f)
 ```
 ### TensorFlow中的Tensors
-TF将数据保存在Tensors中，它有点像numPy包中的多维数组（尽管它们和numPy数组不同）
+TF将数据保存在Tensors中，它有点像numPy包中的多维数组（尽管它们和numPy数组不同）(**TODO**)
 
 * 常量
 
@@ -221,8 +220,9 @@ w = tf.Variable(0.0, name="weights")
 y_model = tf.multiply(X, w)
 
 cost = (tf.pow(Y-y_model, 2))
-train_op = tf.train.GradientDescentOptimizer(0.01).minimize(cost
+train_op = tf.train.GradientDescentOptimizer(0.01).minimize(cost)
 ```
+至于梯度下降的数学原理，这里先不介绍了。(**TODO**)
 
 4. 训练
 
